@@ -1,0 +1,282 @@
+/* --- Sophisticated Purple Color Palette Variables --- */
+:root {
+  --deep-plum: #0c0813;       /* Main deep dark background */
+  --card-purple: #161024;     /* Slightly lighter dark tone for containers */
+  --bright-amethyst: #9d72e6; /* Accent color for links and numbers */
+  --electric-lilac: #b38eff;  /* Hover state neon color */
+  --text-pure: #ffffff;
+  --text-muted: #a29bb0;      /* Muted lavender-gray for paragraph descriptions */
+  --studio-border: #28203d;   /* Subtle dark purple lines */
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', Arial, sans-serif;
+  color: var(--text-pure);
+  background-color: var(--deep-plum);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* --- Navigation Header --- */
+.studio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid var(--studio-border);
+  background-color: rgba(12, 8, 19, 0.8);
+  backdrop-filter: blur(10px); /* Modern frosted-glass effect */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: var(--text-pure);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--electric-lilac);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+  padding: 120px 40px;
+  text-align: center;
+  border-bottom: 1px solid var(--studio-border);
+  /* Elegant, subtle purple glow background element */
+  background: radial-gradient(circle at center, #261646 0%, var(--deep-plum) 70%);
+}
+
+.hero-content {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.hero-badge {
+  display: inline-block;
+  background-color: rgba(157, 114, 230, 0.1);
+  color: var(--bright-amethyst);
+  padding: 6px 16px;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(157, 114, 230, 0.2);
+}
+
+.hero-section h1 {
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  letter-spacing: -0.5px;
+  font-weight: 800;
+}
+
+.hero-section p {
+  font-size: 19px;
+  color: var(--text-muted);
+  margin-bottom: 35px;
+}
+
+.cta-btn {
+  display: inline-block;
+  background-color: var(--bright-amethyst);
+  color: var(--deep-plum);
+  padding: 15px 40px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  font-size: 15px;
+  box-shadow: 0 4px 20px rgba(157, 114, 230, 0.3);
+  transition: all 0.2s ease;
+}
+
+.cta-btn:hover {
+  background-color: var(--electric-lilac);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(179, 142, 255, 0.4);
+}
+
+/* --- Common Layout & Section Design --- */
+.services-section, .portfolio-section {
+  padding: 80px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.services-grid, .portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card, .portfolio-item {
+  background-color: var(--card-purple);
+  border: 1px solid var(--studio-border);
+  padding: 35px;
+  border-radius: 8px;
+  width: 320px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* Micro-Interaction Card Hover Glow */
+.service-card:hover, .portfolio-item:hover {
+  transform: translateY(-6px);
+  border-color: var(--bright-amethyst);
+  box-shadow: 0 10px 25px rgba(157, 114, 230, 0.1);
+}
+
+.card-icon {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.service-card h3, .portfolio-item h3 {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+}
+
+.service-card p, .portfolio-item p {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* --- Project Specific Gallery Upgrades --- */
+.image-wrapper {
+  height: 160px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.fallback-glow {
+  width: 100%;
+  height: 100%;
+  /* Creates an beautiful dark abstract purple backdrop until you add real screenshots */
+  background: linear-gradient(135deg, #1c0f35 0%, #3a1c6a 100%);
+}
+
+.project-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--bright-amethyst);
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.view-link {
+  color: var(--text-pure);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.portfolio-item:hover .view-link {
+  color: var(--electric-lilac);
+}
+
+/* --- Intake Form Styling --- */
+.contact-section {
+  padding: 80px 20px;
+  background-color: rgba(22, 16, 36, 0.5);
+  text-align: center;
+  border-top: 1px solid var(--studio-border);
+}
+
+.quote-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 30px auto 0 auto;
+}
+
+.quote-form input, .quote-form textarea {
+  padding: 16px;
+  background-color: var(--deep-plum);
+  border: 1px solid var(--studio-border);
+  border-radius: 6px;
+  font-size: 15px;
+  color: var(--text-pure);
+  transition: border-color 0.2s ease;
+}
+
+.quote-form input:focus, .quote-form textarea:focus {
+  outline: none;
+  border-color: var(--bright-amethyst);
+}
+
+.quote-form textarea {
+  height: 130px;
+  resize: vertical;
+}
+
+.quote-form button {
+  background-color: var(--bright-amethyst);
+  color: var(--deep-plum);
+  padding: 16px;
+  border: none;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.quote-form button:hover {
+  background-color: var(--electric-lilac);
+}
+
+.studio-footer {
+  text-align: center;
+  padding: 40px;
+  font-size: 13px;
+  color: var(--text-muted);
+  border-top: 1px solid var(--studio-border);
+}
+
+/* --- Fluid Mobile Adaptation --- */
+@media screen and (max-width: 768px) {
+  header { flex-direction: column; gap: 15px; padding: 20px; }
+  .hero-section h1 { font-size: 30px; }
+  .service-card, .portfolio-item { width: 100%; }
+}
