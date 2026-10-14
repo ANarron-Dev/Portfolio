@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Narron Design Studio</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -13,133 +14,330 @@
     <div class="logo">NARRON DESIGN STUDIO</div>
     <nav class="studio-nav">
       <ul>
-        <li><a href="#services">Capabilities</a></li>
-        <li><a href="#portfolio">Launches</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#shop">Shop</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- HERO IMPACT ZONE -->
-  <section class="hero-section">
-    <div class="hero-content">
-      <span class="hero-badge">⚡ Premium Graphic Design</span>
-      <h1>High-Conversion Digital Branding & Visual Layouts</h1>
-        <p>I craft memorable visual identities, bespoke logo systems, and high-fidelity interface layouts tailored for modern brand launches. Built with engineering-grade structural precision.</p>
-      <a href="#contact" class="cta-btn">Request a Quote</a>
-    </div>
-  </section>
+<!-- HOMEPAGE HERO -->
+<section class="hero-section">
+  <div class="hero-content">
+    <span class="hero-badge">
+      Independent Creative Studio
+    </span>
 
-  <!-- CAPABILITIES SECTION -->
-  <section id="services" class="services-section">
-    <h2 class="section-title">Studio Capabilities</h2>
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="card-icon">📐</div>
-        <h3>Brand Systems & Logo Design</h3>
-        <p>Custom vector logo marks, typography pairing rules, and cohesive color profile configurations built to give your business an unforgettable market footprint.</p>
-      </div>
-      <div class="service-card">
-        <div class="card-icon">✉️</div>
-        <h3>Conversion Interface Layouts</h3>
-        <p>High-fidelity landing page and digital UI architecture designed in Figma to guide user eyes directly to your core call-to-action blocks.</p>
-      </div>
-      <div class="service-card">
-        <div class="card-icon">📱</div>
-        <h3>Email Marketing Graphic Systems</h3>
-        <p>Sophisticated editorial newsletter layouts and custom graphic asset slices meticulously optimized for readability and dark-mode contrast thresholds.</p>
-      </div>
+    <h1>Creative ideas. <br>Thoughtfully designed.</h1>
+
+    <p>
+      From expressive graphics and original artwork
+      to digital products and web experiences,
+      Narron Design Studio brings creativity,
+      purpose, and attention to detail to every project.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#portfolio" class="cta-btn">
+        Explore Our Work
+      </a>
+      <a href="#contact" class="cta-btn cta-secondary">
+        Work With Us
+      </a>
     </div>
-    <div class="tech-badge-container" style="text-align: center; margin-top: 40px; opacity: 0.7;">
-  <span style="font-size: 12px; text-transform: uppercase; letter-spacing: 2px; color: var(--bright-amethyst); display: block; margin-bottom: 15px;">An Engineer's Precision. A Designer's Vision.</span>
-  <div style="display: flex; justify-content: center; gap: 20px; font-weight: 600; font-size: 14px;">
-    <span>Because I spent years mapping out native front-end systems with raw code, I approach visual graphic design with absolute structural discipline. I don't just design beautiful graphics - I ensure every layout layout grid, vector file, and color token is mathematically optimized for real-world execution. Your assets will be beautifully organized and a dream for print shops or engineering teams to launch immediately.</span> 
   </div>
-</div>
-  </section>
+</section>
+
+  
+<section id="about" class="about-section">
+  <div class="about-container">
+    <span class="section-eyebrow">ABOUT THE STUDIO</span>
+
+    <h2>Creativity with purpose.</h2>
+
+    <p>
+      Narron Design Studio is an independent creative studio
+      bringing together graphic design, digital products,
+      illustration, and thoughtful visual storytelling.
+    </p>
+
+    <p>
+      Founded on a love of creating and a commitment to
+      continuous learning, NDS approaches every project with
+      curiosity, attention to detail, and a belief that great
+      design should be both expressive and functional.
+    </p>
+
+    <p>
+      From polished marketing materials and practical digital
+      resources to original artwork and interactive experiences,
+      the studio embraces creativity in its many forms.
+    </p>
+
+    <p class="about-signature">
+      Different mediums. One creative vision.
+    </p>
+  </div>
+</section>
+
+ 
+<!-- CREATIVE SERVICES -->
+<section id="services" class="services-section">
+  <h2 class="section-title">What We Create</h2>
+
+  <div class="services-grid">
+
+    <!-- Graphic Design -->
+    <div class="service-card">
+      <div class="card-icon">🎨</div>
+      <h3>Graphic Design & Marketing Materials</h3>
+      <p>
+        Thoughtful, eye-catching designs for businesses,
+        brands, and individuals. From promotional flyers
+        and social media graphics to menus, price lists,
+        and print-ready marketing materials.
+      </p>
+    </div>
+
+    <!-- Digital Products -->
+    <div class="service-card">
+      <div class="card-icon">📚</div>
+      <h3>Digital Products & Creative Resources</h3>
+      <p>
+        Printable activities, worksheets, planners,
+        templates, and downloadable resources designed
+        to make everyday life a little more creative,
+        organized, and enjoyable.
+      </p>
+    </div>
+
+    <!-- Illustration -->
+    <div class="service-card">
+      <div class="card-icon">✏️</div>
+      <h3>Original Art & Illustration</h3>
+      <p>
+        An evolving collection of original illustrations,
+        digital artwork, clip art, and creative assets.
+        New artistic projects and collections are
+        currently in development.
+      </p>
+    </div>
+
+  </div>
+</section>
 
   <!-- RECENT LAUNCHES (Includes all 4 projects now) -->
   <section id="portfolio" class="portfolio-section">
-    <h2 class="section-title">Recent Launches</h2>
+    
+<h2 class="section-title">Selected Work</h2>
+
+<p class="portfolio-intro">
+  Explore a growing collection of graphic design,
+  digital products, original artwork, and web projects.
+</p>
+
+<div class="portfolio-filters"
+     role="group"
+     aria-label="Filter portfolio projects">
+
+  <button type="button" class="filter-btn active"
+          data-filter="all" aria-pressed="true">
+    All Work
+  </button>
+
+  <button type="button" class="filter-btn"
+          data-filter="graphic">
+    Graphic Design
+  </button>
+
+  <button type="button" class="filter-btn"
+          data-filter="products">
+    Digital Products
+  </button>
+
+  <button type="button" class="filter-btn"
+          data-filter="illustration">
+    Illustration
+  </button>
+
+  <button type="button" class="filter-btn"
+          data-filter="web">
+    Web Projects
+  </button>
+
+</div>
     <div class="portfolio-grid">
+      
+<!-- Spooktacular Halloween Activity Book -->
+<div class="portfolio-item" data-category="graphic products">
+  <div class="image-wrapper">
+    <img
+      src="Spooktacular.png"
+      alt="Spooktacular Halloween Activity Book cover"
+      loading="lazy"
+    >
+  </div>
+
+  <div class="portfolio-info">
+    <span class="project-category">
+      Graphic Design / Printables
+    </span>
+
+    <h3>Spooktacular Halloween Activity Book</h3>
+
+    <p>
+      A Halloween-themed printable activity collection
+      featuring custom page layouts, playful typography,
+      and coordinated visual design. Created for
+      digital download and home printing.
+    </p>
+  </div>
+</div>
+
            <!-- Project 1: Shift + Pack Logistics -->
-      <div class="portfolio-item">
+      <div class="portfolio-item" data-category="web">
         <div class="image-wrapper">
           <img src="shift-pack.png" alt="Shift + Pack Logistics Preview" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
         </div>
         <h3>Shift + Pack Logistics</h3>
-        <span class="project-tag">Logistics User Interface & Visual Layout Design</span>
-        <p>A sleek user onboarding flow layout designed to turn complex user logistics data into an effortless, aesthetically balanced visual stream.</p>
+        <span class="project-tag">Web Design | Interface Layout</span>
+        <p>A logistics-themed website concept featuring structured content, intuitive navigation, and a clean visual hierarchy. Designed and hand-coded using HTML, CSS, and JavaScript, with an emphasis on usability, organization, and responsive presentation.</p>
         <!-- Replace with your actual live GitHub pages link when ready! -->
-        <a href="https://anarron-dev.github.io/shift-pack-moving/" target="_blank" class="view-link">View Live Layout →</a>
+        <a href="https://anarron-dev.github.io/shift-pack-moving/" target="_blank" class="view-link">Explore Project →</a>
       </div>
+
       <!-- Project 2: Coffee Landing Page -->
-      <div class="portfolio-item">
-        <div class="image-wrapper">
+      <div class="portfolio-item" data-category="web">
           <!-- Example: Inside your Handcrafted Coffee portfolio card block -->
 <div class="image-wrapper">
   <img src="coffee-card.png" alt="Coffee Landing Page Preview" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
 </div>
-        </div>
         <h3>Handcrafted & Co. Roasters</h3>
-        <span class="project-tag">E-Commerce Visual Branding & Landing Page Architecture</span>
-        <p>A premium, conversion-focused digital layout structured around organic color palettes and striking typography hierarchy to maximize product click-through rates.</p>
-        <a href="https://anarron-dev.github.io/Sample-Projects/Project-3/" target="_blank" class="view-link">View Live Layout →</a>
+        <span class="project-tag">Web Design | Visual Branding</span>
+        <p>A coffee brand landing page concept combining warm, organic colors, expressive typography, and product-focused layouts. Designed and developed to explore how visual identity, composition, and digital presentation work together to create a cohesive brand experience.</p>
+        <a href="https://anarron-dev.github.io/Sample-Projects/Project-3/" target="_blank" class="view-link">Explore Project →</a>
       </div>
 
       <!-- Project 3: Email Template -->
-      <div class="portfolio-item">
-        <div class="image-wrapper">
-          <!-- Example: Inside your Handcrafted Coffee portfolio card block -->
+      <div class="portfolio-item" data-category="web">
 <div class="image-wrapper">
   <img src="email-card.png" alt="Email Template Preview" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
 </div>
-        </div>
         <h3>Handcrafted Welcome Sequence</h3>
-        <span class="project-tag">Email Marketing Design & Typography Hierarchy</span>
-        <p>A high-end editorial newsletter layout built with modular visual content blocks to ensure absolute aesthetic integrity across responsive viewports.</p>
-        <a href="https://anarron-dev.github.io/Sample-Projects/Project-5/" target="_blank" class="view-link">View Live Layout →</a>
+        <span class="project-tag">Email Design | Digital Layout</span>
+        <p>An editorial-style email design concept featuring typography, modular content sections, and balanced visual composition. Created to explore readable, visually engaging communication across different screen sizes.</p>
+        <a href="https://anarron-dev.github.io/Sample-Projects/Project-5/" target="_blank" class="view-link">Explore Project →</a>
       </div>
 
       <!-- Project 4: Sorting Form -->
-      <div class="portfolio-item">
-        <div class="image-wrapper">
-          <!-- Example: Inside your Handcrafted Coffee portfolio card block -->
+      <div class="portfolio-item" data-category="web">
 <div class="image-wrapper">
   <img src="form-card.png" alt="Sorting Form Preview" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
 </div>
-        </div>
         <h3>Sorting Ceremony Questionnaire</h3>
-        <span class="project-tag">Dynamic Intake Form & Structured Layout Design</span>
-        <p>A sleek visual exploration of a multi-step user onboarding flow. The layout transforms complex data collection fields into a beautifully balanced, minimalist interface grid.</p>
-        <a href="https://anarron-dev.github.io/Sample-Projects/Project-4/" target="_blank" class="view-link">View Live Layout →</a>
+        <span class="project-tag">Interactive Design | User Interface</span>
+        <p>An interactive questionnaire concept exploring structured form layouts, visual hierarchy, and user-friendly interactions. Designed and hand-coded to demonstrate how thoughtful interface design can make multi-step experiences engaging and easy to navigate.</p>
+        <a href="https://anarron-dev.github.io/Sample-Projects/Project-4/" target="_blank" class="view-link">Explore Project →</a>
       </div>
 
     </div>
+    <p id="portfolio-empty" class="portfolio-empty" hidden>
+  New projects in this category are coming soon.
+</p>
   </section>
 
+<section id="shop" class="shop-section">
+  <div class="shop-container">
+    <span class="section-eyebrow">THE CREATIVE SHOP</span>
+
+    <h2>A little creativity to take home.</h2>
+
+    <p>
+      Explore a growing collection of thoughtfully designed
+      printables, activity books, templates, and creative
+      resources from Narron Design Studio.
+    </p>
+
+    <p>
+      Made to inspire, organize, entertain, and bring a
+      little more creativity into everyday life.
+    </p>
+
+    <a
+      href="https://www.etsy.com/shop/NarronDesignStudio?ref=profile_header"
+      class="cta-btn"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Explore the Etsy Shop &rarr;
+    </a>
+  </div>
+</section>
+
+
   <!-- INTAKE CONTACT FORM -->
-  <section id="contact" class="contact-section">
-    <h2 class="section-title">Let's Build Your Visual Footprint</h2>
-    <p>Ready to launch a new brand, design a high-conversion layout, or overhaul your visual identity? Drop your details below, and I’ll deliver a transparent, fixed-price design quote within 24 hours.</p>
-    
-    <form action="https://api.web3forms.com/submit" method="POST" class="quote-form">
+ <section id="contact" class="contact-section">
+  <h2 class="section-title">Let's Create Something Together.</h2>
+
+  <p>
+    Have a project in mind? Whether you're looking for
+    eye-catching marketing materials, creative digital
+    assets, or a fresh visual direction for your business,
+    Narron Design Studio would love to hear about it.
+    Share your ideas below, and let's explore what's possible.
+  </p>
+
+   <form action="https://api.web3forms.com/submit" method="POST" class="quote-form">
   <input type="hidden" name="access_key" value="02f478b0-666a-4a09-bc2f-85407a30c4b7">
-      
-      <input type="text" name="client_name" placeholder="Your Name" required>
-      <input type="email" name="client_email" placeholder="Your Business Email" required>
-      <select name="project_type" required style="padding: 16px; background-color: var(--deep-plum); border: 1px solid var(--studio-border); border-radius: 6px; font-size: 15px; color: var(--text-pure); margin-bottom: 5px;">
-  <option value="" disabled selected>What type of design do you need?</option>
-  <option value="marketing-landing-page">Brand Identity & Custom Logo Design</option>
-  <option value="html-email-template">Landing Page Layout & UI Design</option>
-  <option value="responsive-tuneup">E-Commerce Email & Graphic Asset Systems</option>
-  <option value="design-to-code">Custom Design-to-Code Implementation</option>
-</select>
-      <textarea name="project_details" placeholder="Tell me a little bit about your business goals, your target audience, or any design inspiration you have in mind..." required></textarea>
-      
-      <button type="submit">Let's Start Designing!</button>
-    </form>
-  </section>
+    <input
+      type="text"
+      name="client_name"
+      placeholder="Your Name"
+      autocomplete="name"
+      required
+    >
+
+    <input
+      type="email"
+      name="client_email"
+      placeholder="Your Email Address"
+      autocomplete="email"
+      required
+    >
+
+    <select name="project_type" required>
+      <option value="" disabled selected>
+        What can we help you create?
+      </option>
+      <option value="graphic-design">
+        Graphic Design & Marketing Materials
+      </option>
+      <option value="branding">
+        Branding & Visual Identity
+      </option>
+      <option value="digital-assets">
+        Digital Assets & Creative Resources
+      </option>
+      <option value="collaboration">
+        Creative Collaboration
+      </option>
+      <option value="general">
+        General Inquiry / Something Else
+      </option>
+    </select>
+
+    <textarea
+      name="project_details"
+      placeholder="Tell us about your project, ideas, timeline, or what you're hoping to create..."
+      required
+    ></textarea>
+
+    <button type="submit">Send Your Inquiry</button>
+  </form>
+</section>
 
   <!-- FOOTER -->
   <footer class="studio-footer">
