@@ -162,7 +162,13 @@ background:
 
 @media (max-width: 600px) {
   .services-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .service-card {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
   }
 }
 
