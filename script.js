@@ -43,3 +43,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// Preselect a package when following a package request link.
+document.addEventListener("DOMContentLoaded", () => {
+  const requested = new URLSearchParams(window.location.search).get("package");
+  const selector = document.querySelector('select[name="project_type"]');
+  if (selector && requested === "launch") selector.value = "Business Launch Kit";
+  if (selector && requested === "visibility") selector.value = "Business Visibility Kit";
+});

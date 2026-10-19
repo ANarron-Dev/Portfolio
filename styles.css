@@ -545,3 +545,64 @@ background:
 .quote-form textarea {
   font-family: inherit;
 }
+
+
+/* Multi-page expansion: preserve existing visual language */
+*, *::before, *::after {box-sizing:border-box}
+.studio-header .brand-link {display:inline-flex;align-items:center;flex-shrink:0}
+.brand-logo {display:block;width:142px;height:auto;border-radius:5px}
+.studio-nav ul {flex-wrap:wrap;justify-content:center;gap:12px 20px}
+.studio-nav a[aria-current="page"] {color:var(--electric-lilac)}
+.service-card {width:100%;min-width:0}
+.page-intro {padding:85px 24px 40px;text-align:center;max-width:940px;margin:auto}
+.page-intro h1 {font-size:clamp(2rem,5vw,3rem);line-height:1.2;margin:0 0 18px}
+.page-intro p,.section-copy {color:var(--text-muted);line-height:1.8;max-width:750px;margin:0 auto 20px}
+.section-action {text-align:center;margin:32px auto 0}
+.content-section {padding:55px 24px 85px}
+.content-container {max-width:1100px;margin:0 auto}
+.preview-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;max-width:1000px;margin:0 auto}
+.preview-card,.package-card,.info-panel {background:var(--card-purple);border:1px solid var(--studio-border);border-radius:8px;padding:32px}
+.preview-card h3,.package-card h2 {margin-top:0}
+.preview-card p,.package-card p,.info-panel p {color:var(--text-muted)}
+.text-link {color:var(--electric-lilac);font-weight:600;text-decoration:none}
+.text-link:hover {text-decoration:underline}
+.package-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:30px auto 0;max-width:1100px}
+.package-price {font-size:2.2rem;font-weight:800;color:var(--electric-lilac);margin:12px 0 0}
+.package-regular {color:var(--text-muted);font-size:.9rem;margin-bottom:18px}
+.package-card ul,.info-panel ul {padding-left:23px;line-height:1.85}
+.package-card li {margin-bottom:5px}
+.package-meta {margin:20px 0 25px}
+.package-meta p {margin:5px 0}
+.offer-note {max-width:1000px;margin:30px auto 0;color:var(--text-muted);line-height:1.7}
+.terms-layout {max-width:1000px;margin:0 auto;display:grid;gap:20px}
+.terms-layout h3 {color:var(--electric-lilac);margin-bottom:8px}
+.terms-layout p {margin:0;line-height:1.75}
+.contact-lead {padding:35px 24px 65px;text-align:center}
+.contact-lead p {max-width:750px;margin:0 auto 25px;color:var(--text-muted)}
+.quote-form label {text-align:left;font-size:14px;font-weight:600}
+.quote-form input,.quote-form textarea,.quote-form select {width:100%;box-sizing:border-box}
+.quote-form .form-hint {font-size:12px;color:var(--text-muted);text-align:left}
+.quote-form .form-field {display:flex;flex-direction:column;gap:7px}
+.home-featured .portfolio-grid {grid-template-columns:repeat(3,minmax(0,1fr))}
+.home-featured .portfolio-item {width:100%}
+.site-note {color:var(--text-muted);font-size:.9rem}
+@media(max-width:900px) {.brand-logo {width:115px}.studio-header {padding:15px 20px}.home-featured .portfolio-grid {grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px) {.preview-grid,.package-grid,.home-featured .portfolio-grid {grid-template-columns:1fr}.brand-logo {width:112px}.studio-header {gap:15px}.studio-nav ul {gap:8px 13px}.studio-nav a {font-size:13px}.preview-card,.package-card,.info-panel {padding:23px}.hero-section {padding:75px 20px}}
+
+/* Refinements: compact branded navigation and concise homepage services */
+.studio-header .brand-link {display:inline-flex;align-items:center;gap:13px;text-decoration:none;min-width:0}
+.brand-icon {width:44px;height:44px;object-fit:contain;flex-shrink:0;border-radius:4px}
+.brand-name {color:var(--text-pure);font-size:14px;font-weight:900;letter-spacing:1.6px;white-space:nowrap}
+.studio-header {min-height:82px}
+.services-grid:has(.home-service-card) {grid-template-columns:repeat(4,minmax(0,1fr))}
+.home-service-card {padding:26px 22px}
+.home-service-card h3 {font-size:18px}
+.home-service-card p {margin-bottom:0}
+.about-logo-showcase {margin:0 auto 46px;max-width:340px;text-align:center}
+.about-logo-showcase img {display:block;width:100%;height:auto;border-radius:8px}
+@media(max-width:1100px) {.services-grid:has(.home-service-card) {grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px) {.services-grid:has(.home-service-card) {grid-template-columns:1fr}.brand-icon {width:38px;height:38px}.brand-name {font-size:12px;letter-spacing:1px}.studio-header {min-height:0}}
+
+/* Services page: balanced 2-by-2 desktop grid */
+.services-section .services-grid:not(:has(.home-service-card)) {grid-template-columns:repeat(2,minmax(0,1fr));max-width:1100px}
+@media(max-width:650px){.services-section .services-grid:not(:has(.home-service-card)){grid-template-columns:1fr}}
