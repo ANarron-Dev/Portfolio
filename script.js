@@ -44,10 +44,24 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Preselect a package when following a package request link.
+
+ // Preselect a package when following a package request link.
 document.addEventListener("DOMContentLoaded", () => {
   const requested = new URLSearchParams(window.location.search).get("package");
   const selector = document.querySelector('select[name="project_type"]');
-  if (selector && requested === "launch") selector.value = "Business Launch Kit";
-  if (selector && requested === "visibility") selector.value = "Business Visibility Kit";
+
+  if (!selector || !requested) return;
+
+  const packages = {
+    "business-card": "Business Card Kit",
+    "flyer-banner": "Flyer & Banner Kit",
+    "social-media": "Social Media Kit",
+    "visibility": "Business Visibility Kit",
+    "launch": "Business Launch Kit"
+  };
+
+  if (packages[requested]) {
+    selector.value = packages[requested];
+  }
 });
+
