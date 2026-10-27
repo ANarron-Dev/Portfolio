@@ -65,3 +65,107 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+/* Portfolio Case Study Image Viewer */
+document.addEventListener("DOMContentLoaded", () => {
+  const galleries = document.querySelectorAll(".project-gallery");
+
+  if (!galleries.length) return;
+
+  const lightbox = document.createElement("div");
+  lightbox.className = "portfolio-lightbox";
+  lightbox.setAttribute("role", "dialog");
+  lightbox.setAttribute("aria-modal", "true");
+  lightbox.setAttribute("aria-label", "Portfolio image viewer");
+  lightbox.hidden = true;
+
+  lightbox.innerHTML = `
+    <button class="lightbox-close" aria-label="Close image viewer">&times;</button>
+    <button class="lightbox-prev" aria-label="Previous image">&#10094;</button>
+    <div class="lightbox-image-container">
+      <img class="lightbox-image" alt="">
+    </div>
+    <button class="lightbox-next" aria-label="Next image">&#10095;</button>
+    <div class="lightbox-counter"></div>
+  `;
+
+  document.body.appendChild(lightbox);
+
+  const displayImage = lightbox.querySelector(".lightbox-image");
+  const counter = lightbox.querySelector(".lightbox-counter");
+  const closeButton = lightbox.querySelector(".lightbox-close");
+
+  let images = [];
+  let currentIndex = 0;
+  let previousFocus = null;
+
+  function showImage(index) {
+    currentIndex = (index + images.length) % images.length;
+    const selected = images[currentIndex];
+
+    displayImage.src = selected.currentSrc || selected.src;
+    displayImage.alt = selected.alt;
+    counter.textContent = `${currentIndex + 1} / ${images.length}`;
+  }
+
+  function openLightbox(gallery, index) {
+    images = Array.from(gallery.querySelectorAll("img"));
+    if (!images.length) return;
+
+    previousFocus = document.activeElement;
+    lightbox.hidden = false;
+    document.body.style.overflow = "hidden";
+    showImage(index);
+    closeButton.focus();
+  }
+
+  function closeLightbox() {
+    lightbox.hidden = true;
+    document.body.style.overflow = "";
+    displayImage.removeAttribute("src");
+
+    if (previousFocus) previousFocus.focus();
+  }
+
+  galleries.forEach((gallery) => {
+    const galleryImages = gallery.querySelectorAll("img");
+
+    galleryImages.forEach((img, index) => {
+      img.style.cursor = "zoom-in";
+      img.setAttribute("tabindex", "0");
+      img.setAttribute("role", "button");
+      img.setAttribute("aria-label", `Enlarge: ${img.alt}`);
+
+      img.addEventListener("click", () => openLightbox(gallery, index));
+
+      img.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openLightbox(gallery, index);
+        }
+      });
+    });
+  });
+
+  closeButton.addEventListener("click", closeLightbox);
+
+  lightbox.querySelector(".lightbox-prev").addEventListener("click", () => {
+    showImage(currentIndex - 1);
+  });
+
+  lightbox.querySelector(".lightbox-next").addEventListener("click", () => {
+    showImage(currentIndex + 1);
+  });
+
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (lightbox.hidden) return;
+
+    if (event.key === "Escape") closeLightbox();
+    if (event.key === "ArrowLeft") showImage(currentIndex - 1);
+    if (event.key === "ArrowRight") showImage(currentIndex + 1);
+  });
+});
+
