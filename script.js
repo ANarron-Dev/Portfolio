@@ -171,3 +171,60 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+/* Quote Form Submission and Google Analytics Lead Tracking */
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("quote-form");
+  const status = document.getElementById("quote-form-status");
+
+  if (!form || !status) return;
+
+  const submitButton = form.querySelector('button[type="submit"]');
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    if (!form.reportValidity()) return;
+
+    submitButton.disabled = true;
+    status.hidden = false;
+    status.textContent = "Sending your inquiry...";
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: {
+          Accept: "application/json"
+        }
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || result.success !== true) {
+        throw new Error(result.message || "Submission failed.");
+      }
+
+      // Track only confirmed successful submissions.
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "generate_lead", {
+          lead_source: "website_quote_form",
+          project_type: form.elements["project_type"].value
+        });
+      }
+
+      status.textContent =
+        "Thank you! Your inquiry has been sent successfully. I'll be in touch soon.";
+
+      form.reset();
+    } catch (error) {
+      console.error("Quote form submission error:", error);
+
+      status.textContent =
+        "Your inquiry could not be sent. Please try again.";
+
+    } finally {
+      submitButton.disabled = false;
+    }
+  });
+});
+
