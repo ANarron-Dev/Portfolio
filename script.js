@@ -52,13 +52,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!selector || !requested) return;
 
-  const packages = {
-    "business-card": "Business Card Kit",
-    "flyer-banner": "Flyer & Banner Kit",
-    "social-media": "Social Media Kit",
-    "visibility": "Business Visibility Kit",
-    "launch": "Business Launch Kit"
-  };
+  
+const packages = {
+  "business-card": "Business Card Kit",
+  "flyer-banner": "Flyer & Banner Kit",
+  "social-media": "Social Media Kit",
+  "visibility": "Business Visibility Kit",
+  "launch": "Business Launch Kit",
+  "website-design": "Website Design Kit"
+};
 
   if (packages[requested]) {
     selector.value = packages[requested];
