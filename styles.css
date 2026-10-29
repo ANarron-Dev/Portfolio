@@ -745,3 +745,13 @@ background:
     transform: none;
   }
 }
+
+/* Tighten spacing below homepage service cards */
+.services-section {
+  padding-bottom: 20px;
+}
+
+.services-section + .section-action {
+  margin-top: 0;
+  padding-top: 0;
+}
