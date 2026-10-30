@@ -849,7 +849,7 @@ background:
 /* Mobile adjustments */
 @media (max-width: 650px) {
     .about-section {
-        padding-top: 15px;
+        padding-top: 55px;
     }
 
     .about-section .page-intro {
