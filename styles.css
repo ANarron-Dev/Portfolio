@@ -598,8 +598,15 @@ background:
 .home-service-card {padding:26px 22px}
 .home-service-card h3 {font-size:18px}
 .home-service-card p {margin-bottom:0}
-.about-logo-showcase {margin:0 auto 46px;max-width:340px;text-align:center}
-.about-logo-showcase img {display:block;width:100%;height:auto;border-radius:8px}
+.about-logo-showcase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: none;
+    margin: 0 auto 46px;
+}
+.about-logo-showcase img {display:block;width:180px;height:auto;border-radius:8px}
 @media(max-width:1100px) {.services-grid:has(.home-service-card) {grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px) {.services-grid:has(.home-service-card) {grid-template-columns:1fr}.brand-icon {width:38px;height:38px}.brand-name {font-size:12px;letter-spacing:1px}.studio-header {min-height:0}}
 
@@ -754,4 +761,125 @@ background:
 .services-section + .section-action {
   margin-top: 0;
   padding-top: 0;
+}
+/* Center package content while keeping text left-aligned */
+.package-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.package-card > * {
+    width: 100%;
+    max-width: 440px;
+    text-align: left;
+}
+/* Portfolio packages CTA */
+.portfolio-packages-cta {
+    text-align: center;
+    padding: 48px 20px;
+    margin: 40px auto 0;
+}
+
+.portfolio-packages-cta h2 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+}
+
+.portfolio-packages-cta p {
+    color: #b9a7ce;
+    margin-bottom: 24px;
+}
+
+.portfolio-packages-btn {
+    display: inline-block;
+    background: #9f70df;
+    color: #100a1b;
+    padding: 13px 26px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.portfolio-packages-btn:hover {
+    background: #b58af0;
+    transform: translateY(-2px);
+}
+.about-section {
+    padding-top: 20px;
+}
+
+.about-section .page-intro {
+    padding-top: 20px;
+    padding-bottom: 35px;
+}
+/* Package card layout */
+.package-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Center headings and prices */
+.package-card h2,
+.package-card .package-price {
+    width: 100%;
+    text-align: center;
+}
+
+/* Keep details readable and left-aligned */
+.package-card ul,
+.package-card .package-meta {
+    width: fit-content;
+    max-width: 100%;
+    text-align: left;
+    align-self: center;
+}
+
+/* Center compact buttons */
+.package-card .cta-btn {
+    width: fit-content;
+    max-width: 100%;
+    align-self: center;
+    padding: 13px 24px;
+    text-align: center;
+}
+
+/* Mobile adjustments */
+@media (max-width: 650px) {
+    .about-section {
+        padding-top: 15px;
+    }
+
+    .about-section .page-intro {
+        padding-top: 15px;
+    }
+
+    .package-card .cta-btn {
+        white-space: normal;
+    }
+}
+/* Compact mobile navigation */
+@media (max-width: 650px) {
+
+    .studio-header {
+        padding: 10px 14px;
+        gap: 8px;
+    }
+
+    .studio-nav ul {
+        gap: 6px 14px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .studio-nav a {
+        padding: 4px 0;
+        line-height: 1.3;
+    }
+
+    .brand-link {
+        gap: 10px;
+    }
 }
